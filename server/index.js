@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 const seconds1Max = 15,
   seconds2Max = 30,
-seconds3Max = 45;
+  seconds3Max = 45;
 let seconds1 = -1,
   seconds2 = -1,
   seconds3 = -1;
@@ -35,14 +35,14 @@ const startTimer = () => {
       seconds3--;
     } else io.emit("remSeconds3", seconds3Max);
     const currentTime = Math.floor(Date.now() / 1000);
-    console.log("seconds1", currentTime, seconds1);
-    console.log("seconds2", currentTime, seconds2);
-    console.log("seconds3", currentTime, seconds3);
+    // console.log("seconds1", currentTime, seconds1);
+    // console.log("seconds2", currentTime, seconds2);
+    // console.log("seconds3", currentTime, seconds3);
   }, 1000);
 };
 
 io.on("connection", (socket) => {
-  console.log("a user is connected");
+  // console.log("a user is connected");
 
   if (!intervalId) startTimer();
   socket.on("remSec1", (data, callback) => {
@@ -59,7 +59,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("user disconnected");
+    // console.log("user disconnected");
   });
 });
 server.listen(3001, () => {

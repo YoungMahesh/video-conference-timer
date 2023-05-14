@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import Avatar1 from "./Avatar1";
 
 export default function SelfView() {

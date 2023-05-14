@@ -26,14 +26,14 @@ function App() {
         }}
       >
         <Link style={{ color: indigo[900] }} to="/host" target="_blank">
-          Host page
+          Host Page
         </Link>
         <Link
           style={{ color: indigo[900], marginTop: "15px" }}
           target="_blank"
           to="/participant"
         >
-          Participant page
+          Participant Page
         </Link>
       </Box>
     </Box>
